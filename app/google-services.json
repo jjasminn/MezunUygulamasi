@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824706618093",
+    "project_id": "mezunuygulamasi-7d3f0",
+    "storage_bucket": "mezunuygulamasi-7d3f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824706618093:android:14bc2d458b2c258638b2e4",
+        "android_client_info": {
+          "package_name": "com.example.mezunuygulamasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824706618093-m743ob1k5254a7k2ko4qg2vjtj131l1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEh-UFzYovv9F6IDcmCCnUkaR4U2hQjN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824706618093-m743ob1k5254a7k2ko4qg2vjtj131l1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

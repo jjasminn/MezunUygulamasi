@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Profil">
+   <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent">
+
+    <Toolbar
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_collapseMode="pin"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_alignParentEnd="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/backIcon"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/back_foreground" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:text="Profil"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="35dp"
+            android:layout_marginLeft="50dp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"/>
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_centerVertical="true"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="70dp"
+
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/setting_foreground" />
+        <ImageButton
+            android:id="@+id/logoutButton"
+            android:layout_centerVertical="true"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/logout_foreground" />
+
+
+    </RelativeLayout>
+    </Toolbar>
+
+
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/appbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+
+
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@mipmap/person_round" />
+
+       <TextView
+           android:id="@+id/personalInformationLabel"
+           android:text="Kisisel Bilgiler"
+           style="@style/Toolbar.TitleText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/image"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginEnd="15dp"
+           android:layout_marginBottom="25dp"
+           />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personalInformationLabel"
+        android:id="@+id/nameRow"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+
+            android:text="Ad Soyad :" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLabel"
+
+            android:layout_marginEnd="15dp"
+
+            android:textSize="20dp"
+
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/nameRow"
+           android:id="@+id/linkednRow"
+
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/linkednLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+
+               android:text="Linkedn :" />
+
+           <TextView
+               android:id="@+id/linkedn"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+
+               android:textSize="20dp"
+
+               android:padding="5dp"
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/linkednRow"
+           android:id="@+id/mailRow"
+
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/mailLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+
+               android:text="Mail :" />
+
+           <TextView
+               android:id="@+id/mail"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+
+               android:textSize="20dp"
+
+               android:padding="5dp"
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/mailRow"
+           android:id="@+id/phoneRow"
+
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/phoneLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+               android:text="Telefon :" />
+
+           <TextView
+               android:id="@+id/phone"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+
+               android:textSize="20dp"
+
+               android:padding="5dp"
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+
+       </RelativeLayout>
+    <TextView
+        android:id="@+id/educationLabel"
+        android:text="Egitim Bilgileri"
+        style="@style/Toolbar.TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneRow"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/educationLabel"
+        android:id="@+id/licenceRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/licenceLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+
+            android:text="Universite :" />
+
+        <TextView
+            android:id="@+id/licence"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:textSize="20dp"
+
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/licenceRow"
+        android:id="@+id/licenceDepartmentRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/licenceDepartmentLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:text="Bolum :" />
+        <TextView
+            android:id="@+id/licenceDepartment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:textSize="20dp"
+
+
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/licenceDepartmentRow"
+        android:id="@+id/licenceEnterRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/licenceEnterLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:text="Baslangic Tarihi :" />
+
+        <TextView
+            android:id="@+id/licenceEnter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:textSize="20dp"
+
+
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/licenceEnterRow"
+        android:id="@+id/finishLicenceRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/licenceFinishLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:text="Bitis Tarihi :" />
+        <TextView
+            android:id="@+id/licenceFinish"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:textSize="20dp"
+
+
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+       <TextView
+           android:id="@+id/degreeLabel"
+           android:text="Yuksek Lisans Bilgileri (Varsa)"
+           style="@style/Toolbar.TitleText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/finishLicenceRow"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginEnd="15dp"
+           android:layout_marginBottom="25dp"
+           />
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/degreeLabel"
+           android:id="@+id/degreeCollageRow"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/degreeCollageLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+
+               android:text="Universite :" />
+
+           <TextView
+               android:id="@+id/degreeCollage"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:textSize="20dp"
+
+               android:padding="5dp"
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/degreeCollageRow"
+           android:id="@+id/degreeDepartmentRow"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/degreeDepartmentLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_marginStart="25dp"
+               android:text="Bolum :" />
+           <TextView
+               android:id="@+id/degreeDepartment"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:padding="5dp"
+               android:textSize="20dp"
+
+
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/degreeDepartmentRow"
+           android:id="@+id/degreeEnterRow"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/degreeEnterLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+               android:text="Baslangic Tarihi :" />
+
+           <TextView
+               android:id="@+id/degreeEnter"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:padding="5dp"
+               android:textSize="20dp"
+
+
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/degreeEnterRow"
+           android:id="@+id/degreeFinishRow"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/degreeFinishLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+               android:text="Bitis Tarihi :" />
+           <TextView
+               android:id="@+id/degreeFinish"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:padding="5dp"
+               android:textSize="20dp"
+
+
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+
+       <TextView
+           android:id="@+id/doctorateLabel"
+           android:text="Doktora Bilgileri (Varsa)"
+           style="@style/Toolbar.TitleText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/degreeFinishRow"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginEnd="15dp"
+           android:layout_marginBottom="25dp"
+           />
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/doctorateLabel"
+           android:id="@+id/doctorateCollageRow"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/doctorateCollageLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+
+               android:text="Universite :" />
+
+           <TextView
+               android:id="@+id/doctorateCollage"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:textSize="20dp"
+               android:padding="5dp"
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/doctorateCollageRow"
+           android:id="@+id/doctorateDepartmentRow"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/doctorateDepartmentLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_marginStart="25dp"
+               android:text="Bolum :" />
+           <TextView
+               android:id="@+id/doctorateDepartment"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:padding="5dp"
+               android:textSize="20dp"
+
+
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/doctorateDepartmentRow"
+           android:id="@+id/doctorateEnterRow"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/doctorateEnterLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+               android:text="Baslangic Tarihi :" />
+
+           <TextView
+               android:id="@+id/doctorateEnter"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:padding="5dp"
+               android:textSize="20dp"
+
+
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/doctorateEnterRow"
+           android:id="@+id/doctorateFinishRow"
+           android:orientation="vertical">
+           <TextView
+               android:id="@+id/doctorateFinishLabel"
+               style="@style/Toolbar.TitleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="25dp"
+               android:text="Bitis Tarihi :" />
+           <TextView
+               android:id="@+id/doctorateFinish"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="15dp"
+               android:padding="5dp"
+               android:textSize="20dp"
+
+
+               android:textColor="@color/white"
+               android:textColorHint="@color/white" />
+       </RelativeLayout>
+
+
+       <TextView
+        android:id="@+id/businessInformation"
+        android:text="Is Bilgileri"
+        style="@style/Toolbar.TitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doctorateFinishRow"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="25dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/businessInformation"
+        android:id="@+id/companyRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/companyLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:text="Sirket :" />
+        <TextView
+            android:id="@+id/company"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/companyRow"
+        android:id="@+id/companyCountryRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/companyCountryLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:text="Ulke :" />
+        <TextView
+            android:id="@+id/companyCountry"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:textSize="20dp"
+
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/companyCountryRow"
+        android:id="@+id/companyCityRow"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/companyCityLabel"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:text="Sehir :" />
+        <TextView
+            android:id="@+id/companyCity"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:textSize="20dp"
+
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </RelativeLayout>
+
+
+
+
+
+
+   </RelativeLayout>
+
+
+
+
+
+
+</ScrollView>
